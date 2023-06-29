@@ -9,8 +9,8 @@
 
 int main()
 {
-    auto value = alg();
-    hello(value);
+    setlocale(LC_ALL, "Russian");
+    hello(1);
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

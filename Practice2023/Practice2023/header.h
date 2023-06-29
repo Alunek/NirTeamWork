@@ -1,5 +1,6 @@
 #pragma once
+#include <vector>
 
 
-int alg();
+std::vector<int> alg(std::vector<int> a);
 void hello(int value);
