@@ -1,11 +1,16 @@
 ﻿// Practice2023.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
+
 #include <iostream>
+
+#include "header.h"
+
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    auto value = alg();
+    hello(value);
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
