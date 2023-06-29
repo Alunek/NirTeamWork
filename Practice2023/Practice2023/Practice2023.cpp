@@ -2,10 +2,10 @@
 //
 
 
-#include <iostream>
 
 #include "header.h"
-
+#include "algo.h"
+#include "interface.h"
 
 int main()
 {

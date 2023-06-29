@@ -1,4 +1,6 @@
 #include "header.h"
+#include "algo.h"
+#include "interface.h"
 using namespace std;
 
 vector<int> alg(vector<int> a)
