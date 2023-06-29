@@ -1,7 +1,11 @@
 #include "header.h"
+using namespace std;
 
-
-int alg()
+vector<int> alg(vector<int> a)
 {
-    return 1;
+    int temp = 0;
+    temp = a[4];
+    a[4] = a[3];
+    a[3] = temp;
+    return a;
 }
