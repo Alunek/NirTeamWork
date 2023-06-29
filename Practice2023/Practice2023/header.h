@@ -1,6 +1,6 @@
 #pragma once
-#include <vector>
+#include <vector> // массив
+#include <iostream> // консоль
+#include <fstream> // файлы
 
 
-std::vector<int> alg(std::vector<int> a);
-void hello(int value);
