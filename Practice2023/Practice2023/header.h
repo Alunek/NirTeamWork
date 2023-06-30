@@ -1,6 +1,8 @@
 #pragma once
-#include <vector> // массив
-#include <iostream> // консоль
-#include <fstream> // файлы
+#include <string>
+#include <vector> // РјР°СЃСЃРёРІ
+#include <iostream> // РєРѕРЅСЃРѕР»СЊ
+#include <fstream> // С„Р°Р№Р»С‹
 
 
+using namespace std;
