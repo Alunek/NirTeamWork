@@ -1,28 +1,30 @@
-#include <iostream>
-
 #include "header.h"
-#include "algo.h"
 #include "interface.h"
-using namespace std;
 
 
-void hello(int value)
+void print_message(string message)
 {
-    ofstream fout("cppstudio.txt"); // создаём объект класса ofstream для записи и связываем его с файлом cppstudio.txt
-    fout << "Работа с файлами в С++"; // запись строки в файл
-    fout.close(); // закрываем файл
+    //TODO: Р РµР°Р»РёР·РѕРІР°С‚СЊ
+}
 
-    vector<int> a = {1, 2, 3, 5, 4};
-    cout << "Начальный массив\n";
-    for (int i = 0; i < 5; i++) {
-        cout << a[i] << " ";
-    }
-    cout << "\n";
-    cout << "\n";
-    cout << "\n";
-    cout << "Отсортированный массив\n";
-    vector<int> b = alg(a);
-    for (int i = 0; i < 5; i++) {
-        cout << b[i] << " ";
-    }
+int request_number(string message)
+{
+    //TODO: Р РµР°Р»РёР·РѕРІР°С‚СЊ
+    return 0;
+}
+
+void generate_array_to_file(string path, int size)
+{
+    //TODO: Р РµР°Р»РёР·РѕРІР°С‚СЊ
+}
+
+vector<int> read_array(string path)
+{
+    //TODO: Р РµР°Р»РёР·РѕРІР°С‚СЊ
+    return vector<int>();
+}
+
+void write_array(string path, vector<int> array)
+{
+    //TODO: Р РµР°Р»РёР·РѕРІР°С‚СЊ
 }

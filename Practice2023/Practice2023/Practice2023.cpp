@@ -1,25 +1,37 @@
-﻿// Practice2023.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
-
-
 #include "header.h"
-#include "algo.h"
+#include "algorithm.h"
 #include "interface.h"
+
 
 int main()
 {
+    //TODO: Добавить комментарии
+
+    string in_file = "input.txt";
+    string out_file = "output.txt";
+
     setlocale(LC_ALL, "Russian");
-    hello(1);
+
+    print_message("Программа сортировки вставками (insertion sort)");
+    auto size = request_number("Введите размер массива");
+
+    generate_array_to_file(in_file, size);
+
+    auto array = read_array(in_file);
+
+    //TODO: Засечь время начала
+    int begin_time = 0;
+
+    auto sorted_array = sort(array);
+
+    //TODO: Засечь время окончания
+    int end_time = 0;
+
+    //TODO: Сделать проверку
+    auto success_sorted = test_sorted(sorted_array);
+
+    write_array(out_file, sorted_array);
+
+    //TODO: Вывести правильность отсортированного массива
+    //TODO: Вывести время работы алгоритма
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file

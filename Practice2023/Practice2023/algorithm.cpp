@@ -1,13 +1,16 @@
 #include "header.h"
-#include "algo.h"
-#include "interface.h"
-using namespace std;
+#include "algorithm.h"
 
-vector<int> alg(vector<int> a)
+
+vector<int> sort(vector<int> array)
 {
-    int temp = 0;
-    temp = a[4];
-    a[4] = a[3];
-    a[3] = temp;
-    return a;
+    //TODO: Реализовать
+    //TODO: Добавить комментарии
+    return vector<int>();
+}
+
+bool test_sorted(vector<int> array)
+{
+    //TODO: Реализовать
+    return false;
 }

@@ -29,7 +29,7 @@
     <ClInclude Include="header.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="algo.h">
+    <ClInclude Include="algorithm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="interface.h">
