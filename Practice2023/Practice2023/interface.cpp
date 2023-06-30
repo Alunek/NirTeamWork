@@ -18,6 +18,7 @@ void hello(int value)
         cout << a[i] << " ";
     }
     cout << "\n";
+    cout << "\n";
     cout << "Отсортированный массив\n";
     vector<int> b = alg(a);
     for (int i = 0; i < 5; i++) {
