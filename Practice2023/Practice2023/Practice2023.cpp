@@ -5,33 +5,32 @@
 
 int main()
 {
-    //TODO: Р”РѕР±Р°РІРёС‚СЊ РєРѕРјРјРµРЅС‚Р°СЂРёРё
+    while (true)
+    {
+        setlocale(LC_ALL, "ru-RU");
 
-    string in_file = "input.txt";
-    string out_file = "output.txt";
+        string in_file = "input.txt";
+        string out_file = "output.txt";
 
-    setlocale(LC_ALL, "Russian");
+        print_message("Программа сортировки вставками (insertion sort)");
 
-    print_message("РџСЂРѕРіСЂР°РјРјР° СЃРѕСЂС‚РёСЂРѕРІРєРё РІСЃС‚Р°РІРєР°РјРё (insertion sort)");
-    auto size = request_number("Р’РІРµРґРёС‚Рµ СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР°");
+        auto size = request_number("Введите размер массива:");
 
-    generate_array_to_file(in_file, size);
+        generate_array_to_file(in_file, size);
 
-    auto array = read_array(in_file);
+        auto array = read_array(in_file);
 
-    //TODO: Р—Р°СЃРµС‡СЊ РІСЂРµРјСЏ РЅР°С‡Р°Р»Р°
-    int begin_time = 0;
+        auto begin_time = chrono::steady_clock::now(); // Засечь время начала
+        sort(array);
+        auto end_time = chrono::steady_clock::now(); // Засечь время окончания
+        double time = chrono::duration_cast<chrono::nanoseconds>(end_time - begin_time).count() / 1000000000.0;
 
-    auto sorted_array = sort(array);
+        auto success_sorted = test_sorted(array); // Делаем проверку на правильно сортировки
 
-    //TODO: Р—Р°СЃРµС‡СЊ РІСЂРµРјСЏ РѕРєРѕРЅС‡Р°РЅРёСЏ
-    int end_time = 0;
+        write_array(out_file, array);
 
-    //TODO: РЎРґРµР»Р°С‚СЊ РїСЂРѕРІРµСЂРєСѓ
-    auto success_sorted = test_sorted(sorted_array);
-
-    write_array(out_file, sorted_array);
-
-    //TODO: Р’С‹РІРµСЃС‚Рё РїСЂР°РІРёР»СЊРЅРѕСЃС‚СЊ РѕС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅРѕРіРѕ РјР°СЃСЃРёРІР°
-    //TODO: Р’С‹РІРµСЃС‚Рё РІСЂРµРјСЏ СЂР°Р±РѕС‚С‹ Р°Р»РіРѕСЂРёС‚РјР°
+        print_message(success_sorted ? "Массив отсортирован правильно" : "Массив отсортирован не правильно");
+        print_message("Время работы алгоритма: " + to_string(time) + "сек.");
+        print_message("");
+    }
 }
